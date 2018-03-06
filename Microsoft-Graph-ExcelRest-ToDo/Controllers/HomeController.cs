@@ -8,7 +8,7 @@ using System.Web.Mvc;
 using Microsoft_Graph_ExcelRest_ToDo.TokenStorage;
 using System.Configuration;
 using System.Threading.Tasks;
-using Microsoft_Graph_ExcelRest_ToDo.Auth;
+using Microsoft_Graph_ExcelRest_ToDo.Helpers;
 
 namespace Microsoft_Graph_ExcelRest_ToDo.Controllers
 {
@@ -41,15 +41,7 @@ namespace Microsoft_Graph_ExcelRest_ToDo.Controllers
 
             SessionTokenCache tokenCache = new SessionTokenCache(userObjId, HttpContext);
 
-            string tenantId = System.Security.Claims.ClaimsPrincipal.Current
-                .FindFirst("http://schemas.microsoft.com/identity/claims/tenantid").Value;
-
-            string authority = string.Format(ConfigurationManager.AppSettings["ida:AADInstance"], tenantId, "");
-
-            AuthHelper authHelper = new AuthHelper(authority, ConfigurationManager.AppSettings["ida:AppId"],
-              ConfigurationManager.AppSettings["ida:AppSecret"], tokenCache);
-
-            ViewBag.AccessToken = await authHelper.GetUserAccessToken(Url.Action("Index", "Home", null, Request.Url.Scheme));
+            ViewBag.AccessToken = await SampleAuthProvider.Instance.GetUserAccessTokenAsync();
 
             if (null == ViewBag.AccessToken)
             {

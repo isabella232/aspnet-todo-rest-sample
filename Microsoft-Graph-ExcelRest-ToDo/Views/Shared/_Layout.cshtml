@@ -34,9 +34,6 @@ See LICENSE in the project root for license information. -->
                 {
                 <text>
                     <ul class="nav navbar-nav navbar-right">
-                        <li class="navbar-text">
-                            Hello, @(System.Security.Claims.ClaimsPrincipal.Current.FindFirst("http://schemas.xmlsoap.org/ws/2005/05/identity/claims/upn").Value)!
-                        </li>
                         <li>
                             @Html.ActionLink("Sign out", "SignOut", "Account")
                         </li>
