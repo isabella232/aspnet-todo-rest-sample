@@ -9,31 +9,30 @@ This sample requires the following:
   * [Visual Studio 2015](https://www.visualstudio.com/en-us/downloads) 
   * Either a [Microsoft account](https://www.outlook.com) or [work or school account](https://dev.office.com/devprogram)
 
-## Register the application
-
-1. Sign into the [Application Registration Portal](https://apps.dev.microsoft.com/) using either your personal or work or school account.
-
-2. Choose **Add an app**.
-
-3. Enter a name for the app, and choose **Create application**. 
-	
-   The registration page displays, listing the properties of your app.
-
-4. Copy the Application Id. This is the unique identifier for your app. 
-
-5. Under **Application Secrets**, choose **Generate New Password**. Copy the password from the **New password generated** dialog.
-
-   You'll use the application ID and password (secret) to configure the sample app in the next section. 
-
-6. Under **Platforms**, choose **Add Platform**.
-
-7. Choose **Web**.
-
-8. Make sure the **Allow Implicit Flow** check box is selected, and enter *http://localhost:21942/* as the Redirect URI. 
-
-   The **Allow Implicit Flow** option enables the hybrid flow. During authentication, this enables the app to receive both sign-in info (the id_token) and artifacts (in this case, an authorization code) that the app can use to obtain an access token.
-
-9. Choose **Save**.
+## Register the application 
+ 
+1. Navigate to the [the Azure portal - App registrations](https://go.microsoft.com/fwlink/?linkid=2083908) to register your app. Login using a **Work or School Account**. 
+ 
+2. Select **New registration**. On the **Register an application** page, set the values as follows. 
+ 
+* Set **Name** to Microsoft-Graph-ExcelRest-ToDo. 
+* Set **Supported account types** to **Accounts in any organizational directory**. 
+* Leave **Redirect URI** empty. 
+* Choose **Register**. 
+ 
+3. On the **Microsoft-Graph-ExcelRest-ToDo** page, copy and save the values for the **Application (client) ID** and the **Directory (tenant) ID**. You will need them in step 7. 
+ 
+4. Select **Certificates & secrets** under **Manage**. Select the **New client secret** button. Enter a value in **Description**, select any option for **Expires** and choose **Add**. 
+ 
+5. Copy the client secret value before leaving the page. You will need it in the next step. 
+ 
+6. [CONFIRM THAT THESE INSTRUCTIONS WORK FOR YOUR SAMPLE] Open the sample solution in Visual Studio and then open the **Constants.cs** file. Change the **Tenant** string to the **Directory (tenant) ID** value you copied earlier. Similarly, change the **ClientIdForAppAuthn** string to the **Application (client) ID** value and change the **ClientSecret** string to the client secret value. 
+ 
+7. Return to the Azure Active Directory management center. Select **API permissions** and then select **Add a permission**. On the panel that appears, choose **Microsoft Graph** and then choose **Application permissions**. 
+ 
+8. Use the **Select permissions** search box to search for the following permissions: [PERMISSIONS TO REQUEST]. Select the check box for each permission as it appears (note that the permissions will not remain visible in the list as you select each one). Select the **Add permissions** button at the bottom of the panel. 
+ 
+9. Choose the **Grant admin consent for [tenant name]** button. Select **Yes** for the confirmation that appears. 
 
 ## Configure the app
 1. Open **Microsoft-Graph-ExcelRest-ToDo.sln** file. 
