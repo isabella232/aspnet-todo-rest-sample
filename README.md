@@ -83,4 +83,4 @@ Questions about Office 365 development in general should be posted to [Stack Ove
 
 
 ## Copyright
-Copyright (c) 2018 Microsoft. All rights reserved.
+Copyright (c) 2019 Microsoft. All rights reserved.
