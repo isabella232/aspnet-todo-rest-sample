@@ -11,28 +11,28 @@ This sample requires the following:
 
 ## Register the application 
  
-1. Navigate to the [the Azure portal - App registrations](https://go.microsoft.com/fwlink/?linkid=2083908) to register your app. Login using a **Work or School Account**. 
+1. Determine your ASP.NET app's URL. In Visual Studio's Solution Explorer, select the Microsoft-Graph-ExcelRest-ToDo project. In the Properties window, find the value of SSL URL. Copy this value.  
+![Application URL](images/ApplicationURL.PNG) 
+
+2. Navigate to the [the Azure portal - App registrations](https://go.microsoft.com/fwlink/?linkid=2083908) to register your app. Login using a **Work or School Account**.  
+![New registration Page](images/NewRegistration.PNG)
  
-2. Select **New registration**. On the **Register an application** page, set the values as follows. 
+3. Select **New registration**. On the **Register an application** page, set the values as follows. 
  
 * Set **Name** to Microsoft-Graph-ExcelRest-ToDo. 
 * Set **Supported account types** to **Accounts in any organizational directory**. 
 * Leave **Redirect URI** empty. 
-* Choose **Register**. 
+* Choose **Register**.  
+![Application Registration](images/ApplicationRegistration.PNG)
  
-3. On the **Microsoft-Graph-ExcelRest-ToDo** page, copy and save the values for the **Application (client) ID** and the **Directory (tenant) ID**. You will need them in step 7. 
+4. On the **Microsoft-Graph-ExcelRest-ToDo** page, copy and save the values for the **Application (client) ID**.  
+![Application Registration](images/ApplicationID.PNG) 
  
-4. Select **Certificates & secrets** under **Manage**. Select the **New client secret** button. Enter a value in **Description**, select any option for **Expires** and choose **Add**. 
+5. Select **Certificates & secrets** under **Manage**. Select the **New client secret** button. Enter a value in **Description**, select any option for **Expires** and choose **Add**.  
+![Certificates & secrets](images/ClientSecretRegistration.PNG)
  
-5. Copy the client secret value before leaving the page. You will need it in the next step. 
- 
-6. Open the sample solution in Visual Studio and then open the **Constants.cs** file. Change the **Tenant** string to the **Directory (tenant) ID** value you copied earlier. Similarly, change the **ClientIdForAppAuthn** string to the **Application (client) ID** value and change the **ClientSecret** string to the client secret value. 
- 
-7. Return to the Azure Active Directory management center. Select **API permissions** and then select **Add a permission**. On the panel that appears, choose **Microsoft Graph** and then choose **Application permissions**. 
- 
-8. Use the **Select permissions** search box to search for the following permissions: [PERMISSIONS TO REQUEST]. Select the check box for each permission as it appears (note that the permissions will not remain visible in the list as you select each one). Select the **Add permissions** button at the bottom of the panel. 
- 
-9. Choose the **Grant admin consent for [tenant name]** button. Select **Yes** for the confirmation that appears. 
+6. Copy the client secret value before leaving the page. You will need it in the next step.  
+ ![Certificates & secrets](images/ClientSecret.PNG)
 
 ## Configure the app
 1. Open **Microsoft-Graph-ExcelRest-ToDo.sln** file. 
@@ -75,4 +75,4 @@ Questions about Office 365 development in general should be posted to [Stack Ove
 
 
 ## Copyright
-Copyright (c) 2018 Microsoft. All rights reserved.
+Copyright (c) 2019 Microsoft. All rights reserved.
