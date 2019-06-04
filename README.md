@@ -33,14 +33,6 @@ This sample requires the following:
  
 6. Copy the client secret value before leaving the page. You will need it in the next step.  
  ![Certificates & secrets](images/ClientSecret.PNG)
- 
-7. Select **API permissions** and then select **Add a permission**. On the panel that appears, choose **Microsoft Graph** and then choose **Application permissions**.  
-![Application Permissions](images/ApplicationPermissions.PNG)
- 
-8. Use the **Select permissions** search box to search for the following permissions: [PERMISSIONS TO REQUEST]. Select the check box for each permission as it appears (note that the permissions will not remain visible in the list as you select each one). Select the **Add permissions** button at the bottom of the panel. 
- 
-9. Choose the **Grant admin consent for [tenant name]** button. Select **Yes** for the confirmation that appears.  
-![Administrator Consent](images/AdminConsent.PNG) 
 
 ## Configure the app
 1. Open **Microsoft-Graph-ExcelRest-ToDo.sln** file. 
