@@ -1,21 +1,3 @@
----
-page_type: sample 
-products:
-- office-onedrive
-- office-excel
-- ms-graph
-languages:
-- csharp
-- aspx
-extensions:
-  contentType: samples
-  technologies:
-  - Microsoft Graph
-  services:
-  - OneDrive
-  - Excel
-  createdDate: 3/14/2016 10:29:14 AM
----
 # Microsoft Graph Excel REST API ASP.NET to-do list sample
 
 This sample shows how to read and write into an Excel document stored in your OneDrive for Business account by using the Excel REST APIs.
